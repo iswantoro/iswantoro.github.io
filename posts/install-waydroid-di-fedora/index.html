@@ -101,9 +101,11 @@
 $ sudo dnf install kernel-xanmod-edge </code></pre></div></p>
 <p>Kernel xanmod akan mengakibatkan crash pada <em>lkmd</em> sehingga kita perlu menambahkan kernel parameter psi=1 dengan cara sebagai berikut :
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grubby --update-kernel<span style="color:#f92672">=</span>ALL --args<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;psi=1&#34;</span></code></pre></div></p>
-<p>kemudian lakukan update grub dengan menjalankan command berikut
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grub2-mkconfig</code></pre></div></p>
-<p>restart dan pilih kernel xanmod pada grub.</p>
+<p>kemudian lakukan update grub dengan menjalankan command berikut jika kalian menggunakan UEFI mode
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grub2-mkconfig -o /etc/grub2-efi.cfg </code></pre></div>
+atau command berikut jika menggunakan Legacy BIOS
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grub2-mkconfig -o /etc/grub2.cfg </code></pre></div>
+restart dan pilih kernel xanmod pada grub.</p>
 <p>Langkah kedua adalah melakukan installasi waydroid, tutorial dalam bahasa inggris dapat dibaca pada halaman <a href="https://yanqiyu.info/2021/10/25/waydroid-fedora">web berikut</a>
 Langkah pertama tambahakan repo copr waydroid dan install waydroid-nya
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf copr enable yanqiyu/waydroid
