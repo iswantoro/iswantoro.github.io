@@ -100,9 +100,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf copr enable rmnscnce/kernel-xanmod
 $ sudo dnf install kernel-xanmod-edge </code></pre></div></p>
 <p>Kernel xanmod akan mengakibatkan crash pada <em>lkmd</em> sehingga kita perlu menambahkan kernel parameter psi=1 dengan cara sebagai berikut :
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/default/grub</code></pre></div>
-tambahkan psi=1 pada baris GRUB_CMDLINE_LINUX=&quot;&hellip;&quot;
-sehingga menjadi GRUB_CMDLINE_LINUX=&ldquo;ps=1 &hellip;&rdquo; <em><strong>catatan : hanya tambahkan psi=1 dan jangan menghapus ataupun mengubah kernel parameter yang lain, biarkan default</strong></em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grubby --update-kernel<span style="color:#f92672">=</span>ALL --args<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;psi=1&#34;</span></code></pre></div></p>
 <p>kemudian lakukan update grub dengan menjalankan command berikut
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grub2-mkconfig</code></pre></div></p>
 <p>restart dan pilih kernel xanmod pada grub.</p>
