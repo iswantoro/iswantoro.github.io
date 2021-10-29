@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Install Waydroid di Fedora 34 // Catatan Saya</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="MAISwantoro" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://iswantoro.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install Waydroid di Fedora 34"/>
+<meta name="twitter:description" content="Waydroid - aplikasi yang bertujuan untuk menjalankan android apps di linux. Waydroid berjalan yang di wayland display server ini merupakan pengembangan dari anbox. Untuk menjalankan waydroid hal yang perlu diperhatikan adalah sebagai berikut :
+ Kernel yang support ashmem dan binder. Untuk kernel bawaan dari distro biasanya belum mengaktifkan module ini, di fedora, khususnya fedora 34, bisa melakukan compile ulang kernel seperti tutorial pada web ini atau dengan menggunakan kernel xanmod di copr."/>
+
+    <meta property="og:title" content="Install Waydroid di Fedora 34" />
+<meta property="og:description" content="Waydroid - aplikasi yang bertujuan untuk menjalankan android apps di linux. Waydroid berjalan yang di wayland display server ini merupakan pengembangan dari anbox. Untuk menjalankan waydroid hal yang perlu diperhatikan adalah sebagai berikut :
+ Kernel yang support ashmem dan binder. Untuk kernel bawaan dari distro biasanya belum mengaktifkan module ini, di fedora, khususnya fedora 34, bisa melakukan compile ulang kernel seperti tutorial pada web ini atau dengan menggunakan kernel xanmod di copr." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iswantoro.github.io/posts/install-waydroid-di-fedora/" />
+<meta property="article:published_time" content="2021-10-29T10:00:10+07:00" />
+<meta property="article:modified_time" content="2021-10-29T10:00:10+07:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://iswantoro.github.io"><img class="app-header-avatar" src="/img/avatar.jpeg" alt="MAISwantoro" /></a>
+      <h1>Catatan Saya</h1>
+      <p>Hanya ingin menulis, sesuatu yang sudah pernah saya coba. catatan pengingat perjalanan</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/iswantoro" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Iswantoro&#39;s Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://t.me/MAIswantoro" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Install Waydroid di Fedora 34</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Oct 29, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Waydroid - aplikasi yang bertujuan untuk menjalankan android apps di linux. Waydroid berjalan yang di wayland display server ini merupakan pengembangan dari anbox. Untuk menjalankan waydroid hal yang perlu diperhatikan adalah sebagai berikut :</p>
+<ol>
+<li>Kernel yang support ashmem dan binder. Untuk kernel bawaan dari distro biasanya belum mengaktifkan module ini, di fedora, khususnya fedora 34, bisa melakukan compile ulang kernel seperti tutorial pada <a href="https://yanqiyu.info/2021/10/25/waydroid-fedora/">web ini</a> atau dengan menggunakan <a href="https://copr.fedorainfracloud.org/coprs/rmnscnce/kernel-xanmod/">kernel xanmod</a> di copr.</li>
+<li>Desktop Environtment yang berjalan pada Wayland.</li>
+</ol>
+<p>Nah, untuk kali ini saya akan membuat sebuah catatan pengalaman saya dalam menginstall Waydroid di Fedora 34. Sesuai keterangan di atas, waydroid hanya bisa berjalan dengan kernel yang module ashmem dan binder nya aktif. Sehingga yang saya lakukan pertama kali adalah menginstall kernel xanmod.</p>
+<p>Install kernel xanmod dengan command berikut :
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf copr enable rmnscnce/kernel-xanmod
+$ sudo dnf install kernel-xanmod-edge </code></pre></div></p>
+<p>Kernel xanmod akan mengakibatkan crash pada <em>lkmd</em> sehingga kita perlu menambahkan kernel parameter psi=1 dengan cara sebagai berikut :
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/default/grub</code></pre></div>
+tambahkan psi=1 pada baris GRUB_CMDLINE_LINUX=&quot;&hellip;&quot;
+sehingga menjadi GRUB_CMDLINE_LINUX=&ldquo;ps=1 &hellip;&rdquo; <em><strong>catatan : hanya tambahkan psi=1 dan jangan menghapus ataupun mengubah kernel parameter yang lain, biarkan default</strong></em></p>
+<p>kemudian lakukan update grub dengan menjalankan command berikut
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grub2-mkconfig</code></pre></div></p>
+<p>restart dan pilih kernel xanmod pada grub.</p>
+<p>Langkah kedua adalah melakukan installasi waydroid, tutorial dalam bahasa inggris dapat dibaca pada halaman <a href="https://yanqiyu.info/2021/10/25/waydroid-fedora">web berikut</a>
+Langkah pertama tambahakan repo copr waydroid dan install waydroid-nya
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf copr enable yanqiyu/waydroid
+$ sudo dnf install waydroid</code></pre></div></p>
+<p>karena kita menggunakan kernel xanmod, kita harus mengubah isi dari /etc/gbinder.d/anbox.conf menjadi
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>Protocol<span style="color:#f92672">]</span>
+/dev/anbox-binder <span style="color:#f92672">=</span> aidl2
+/dev/anbox-vndbinder <span style="color:#f92672">=</span> aidl2
+/dev/anbox-hwbinder <span style="color:#f92672">=</span> hidl
+
+<span style="color:#f92672">[</span>ServiceManager<span style="color:#f92672">]</span>
+/dev/anbox-binder <span style="color:#f92672">=</span> aidl2
+/dev/anbox-vndbinder <span style="color:#f92672">=</span> aidl2
+/dev/anbox-hwbinder <span style="color:#f92672">=</span> hidl</code></pre></div></p>
+<p>selain melakukan edit file diatas, pada kernel xanmod juga perlu melakukan set SELINUX ke permissive, dengan cara sebagai berikut :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo setenforce <span style="color:#ae81ff">0</span></code></pre></div>
+<p>setelahnya tinggal lakukan sesuai dengan web <a href="https://waydro.id/#howto">waydroid</a>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl start waydroid-container.service
+$ sudo waydroid init 
+$ waydroid show-full-ui</code></pre></div></p>
+<p>dan viola, waydroid siap digunakan.</p>
+<p><strong>sebagai catatan : jika anda menginginkan menggunakan google playstore, pada saat init, gunakan command berikut :</strong>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo waydroid init -s GAPPS</code></pre></div></p>
+<p>berikut beberapa gambar waydroid yang sudah terinstall
+<img src="/img/ss1.png" alt="Gambar 1">
+Halaman Awal Waydroid
+<img src="/img/ss2.png" alt="Gambar 2">
+Pengaturan pada waydroid
+<img src="/img/ps.png" alt="Gambar 3">
+Playstore di waydroid</p>
+<p>Link Referensi :</p>
+<ol>
+<li>Karoboniru&rsquo;s Blog - <a href="https://yanqiyu.info/2021/10/25/waydroid-fedora/">Waydroid on Fedora</a></li>
+<li>rmnscnce copr - <a href="https://copr.fedorainfracloud.org/coprs/rmnscnce/kernel-xanmod/">Kernel Xanmod</a></li>
+<li><a href="https://waydro.id">Waydroid</a></li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
