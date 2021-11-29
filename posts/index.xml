@@ -6,8 +6,19 @@
     <description>Recent content in Posts on Catatan Saya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-<<<<<<< HEAD
-    <lastBuildDate>Mon, 29 Nov 2021 10:21:07 +0700</lastBuildDate><atom:link href="https://iswantoro.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Nov 2021 21:30:23 +0700</lastBuildDate><atom:link href="https://iswantoro.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Catatan Hugo Di Linux</title>
+      <link>https://iswantoro.github.io/posts/catatan-hugo-di-linux/</link>
+      <pubDate>Mon, 29 Nov 2021 21:30:23 +0700</pubDate>
+      
+      <guid>https://iswantoro.github.io/posts/catatan-hugo-di-linux/</guid>
+      <description>Ini adalah catatan pribadi saya, biar ketika membuat content baru di hugo tidak lupa cara post nya. hehehe
+  buat post baru $ hugo new posts/judul.md setelah selesai edit edit $ hugo server
+  kirim ke github pindah ke folder public dulu sebelum kirim ke github $ cd public $ git add . $ git commit -m &amp;#34;post baru des&amp;#34; $ git push origin main
+  </description>
+    </item>
+    
     <item>
       <title>Install Cisco Packet Tracer Di Fedora 35</title>
       <link>https://iswantoro.github.io/posts/install-cisco-packet-tracer-di-fedora-35/</link>
@@ -17,9 +28,6 @@
       <description>Cisco Packet Tracer, adalah sebuah software yang sering dipakai oleh mahasiswa ataupun pelajar untuk mempelajari jaringan. Software ini digunakan untuk simulasi topologi jaringan. Terdapat banyak macam router, switch dan perangkat jaringan cisco lainnya yang bisa digunakan untuk simulasi. Cisco Packet Tracer tersedia gratis di web netacad.com, hanya dengan mendaftar dan mengikuti kelas packet tracer. Software ini mendukut banyak sistem operasi, tidak hanya windows, tapi juga MacOS dan Linux Ubuntu. Dalam tulisan ini saya akan mencatat langkah-langkah yang saya kerjakan saat menginstall aplikasi ini pada sistem operasi Fedora 35.</description>
     </item>
     
-=======
-    <lastBuildDate>Fri, 29 Oct 2021 10:00:10 +0700</lastBuildDate><atom:link href="https://iswantoro.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
->>>>>>> origin/main
     <item>
       <title>Install Waydroid di Fedora 34</title>
       <link>https://iswantoro.github.io/posts/install-waydroid-di-fedora/</link>

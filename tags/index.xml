@@ -6,7 +6,6 @@
     <description>Recent content in Tags on Catatan Saya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-<<<<<<< HEAD
     <lastBuildDate>Mon, 29 Nov 2021 10:21:07 +0700</lastBuildDate><atom:link href="https://iswantoro.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cisco packet tracer</title>
@@ -21,13 +20,6 @@
       <title>fedora</title>
       <link>https://iswantoro.github.io/tags/fedora/</link>
       <pubDate>Mon, 29 Nov 2021 10:21:07 +0700</pubDate>
-=======
-    <lastBuildDate>Fri, 29 Oct 2021 10:00:10 +0700</lastBuildDate><atom:link href="https://iswantoro.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>fedora</title>
-      <link>https://iswantoro.github.io/tags/fedora/</link>
-      <pubDate>Fri, 29 Oct 2021 10:00:10 +0700</pubDate>
->>>>>>> origin/main
       
       <guid>https://iswantoro.github.io/tags/fedora/</guid>
       <description></description>
@@ -36,11 +28,7 @@
     <item>
       <title>tutorial</title>
       <link>https://iswantoro.github.io/tags/tutorial/</link>
-<<<<<<< HEAD
       <pubDate>Mon, 29 Nov 2021 10:21:07 +0700</pubDate>
-=======
-      <pubDate>Fri, 29 Oct 2021 10:00:10 +0700</pubDate>
->>>>>>> origin/main
       
       <guid>https://iswantoro.github.io/tags/tutorial/</guid>
       <description></description>
