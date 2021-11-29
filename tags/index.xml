@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Catatan Saya</title>
+    <link>https://iswantoro.github.io/tags/</link>
+    <description>Recent content in Tags on Catatan Saya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Nov 2021 10:21:07 +0700</lastBuildDate><atom:link href="https://iswantoro.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cisco packet tracer</title>
+      <link>https://iswantoro.github.io/tags/cisco-packet-tracer/</link>
+      <pubDate>Mon, 29 Nov 2021 10:21:07 +0700</pubDate>
+      
+      <guid>https://iswantoro.github.io/tags/cisco-packet-tracer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fedora</title>
+      <link>https://iswantoro.github.io/tags/fedora/</link>
+      <pubDate>Mon, 29 Nov 2021 10:21:07 +0700</pubDate>
+      
+      <guid>https://iswantoro.github.io/tags/fedora/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://iswantoro.github.io/tags/tutorial/</link>
+      <pubDate>Mon, 29 Nov 2021 10:21:07 +0700</pubDate>
+      
+      <guid>https://iswantoro.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>waydroid</title>
+      <link>https://iswantoro.github.io/tags/waydroid/</link>
+      <pubDate>Fri, 29 Oct 2021 10:00:10 +0700</pubDate>
+      
+      <guid>https://iswantoro.github.io/tags/waydroid/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
