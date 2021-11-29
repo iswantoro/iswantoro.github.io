@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Install Cisco Packet Tracer Di Fedora 35 // Catatan Saya</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="MAISwantoro" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://iswantoro.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install Cisco Packet Tracer Di Fedora 35"/>
+<meta name="twitter:description" content="Cisco Packet Tracer, adalah sebuah software yang sering dipakai oleh mahasiswa ataupun pelajar untuk mempelajari jaringan. Software ini digunakan untuk simulasi topologi jaringan. Terdapat banyak macam router, switch dan perangkat jaringan cisco lainnya yang bisa digunakan untuk simulasi. Cisco Packet Tracer tersedia gratis di web netacad.com, hanya dengan mendaftar dan mengikuti kelas packet tracer. Software ini mendukut banyak sistem operasi, tidak hanya windows, tapi juga MacOS dan Linux Ubuntu. Dalam tulisan ini saya akan mencatat langkah-langkah yang saya kerjakan saat menginstall aplikasi ini pada sistem operasi Fedora 35."/>
+
+    <meta property="og:title" content="Install Cisco Packet Tracer Di Fedora 35" />
+<meta property="og:description" content="Cisco Packet Tracer, adalah sebuah software yang sering dipakai oleh mahasiswa ataupun pelajar untuk mempelajari jaringan. Software ini digunakan untuk simulasi topologi jaringan. Terdapat banyak macam router, switch dan perangkat jaringan cisco lainnya yang bisa digunakan untuk simulasi. Cisco Packet Tracer tersedia gratis di web netacad.com, hanya dengan mendaftar dan mengikuti kelas packet tracer. Software ini mendukut banyak sistem operasi, tidak hanya windows, tapi juga MacOS dan Linux Ubuntu. Dalam tulisan ini saya akan mencatat langkah-langkah yang saya kerjakan saat menginstall aplikasi ini pada sistem operasi Fedora 35." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iswantoro.github.io/posts/install-cisco-packet-tracer-di-fedora-35/" />
+<meta property="article:published_time" content="2021-11-29T10:21:07+07:00" />
+<meta property="article:modified_time" content="2021-11-29T10:21:07+07:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://iswantoro.github.io"><img class="app-header-avatar" src="/img/avatar.jpeg" alt="MAISwantoro" /></a>
+      <h1>Catatan Saya</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>Hanya ingin menulis, sesuatu yang sudah pernah saya coba. catatan pengingat perjalanan</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/iswantoro" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Iswantoro&#39;s Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://t.me/MAIswantoro" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Install Cisco Packet Tracer Di Fedora 35</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Nov 29, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://iswantoro.github.io/tags/fedora/">fedora</a>
+              <a class="tag" href="https://iswantoro.github.io/tags/tutorial/">tutorial</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Cisco Packet Tracer, adalah sebuah software yang sering dipakai oleh mahasiswa ataupun pelajar untuk mempelajari jaringan. Software ini digunakan untuk simulasi topologi jaringan. Terdapat banyak macam router, switch dan perangkat jaringan cisco lainnya yang bisa digunakan untuk simulasi.
+Cisco Packet Tracer tersedia gratis di web netacad.com, hanya dengan mendaftar dan mengikuti kelas packet tracer. Software ini mendukut banyak sistem operasi, tidak hanya windows, tapi juga MacOS dan Linux Ubuntu.
+Dalam tulisan ini saya akan mencatat langkah-langkah yang saya kerjakan saat menginstall aplikasi ini pada sistem operasi Fedora 35.
+Hal-hal yang perlu diperhatikan adalah untuk installer software nya, bisa di download pada web netacad, yang kita download adalah installer versi .deb punya ubuntu.
+Langkah-langkanya adalah sebagai berikut :</p>
+<ol>
+<li>Buka folder yang berisi file yang sudah kita download.</li>
+<li>Klik kanan pada foldernya, kemudian open folder in terminal</li>
+<li>Buat folder baru dengan nama pt80
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir pt80</code></pre></div></li>
+<li>copy file .deb ke folder pt80
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cp CiscoPacketTracer_801_Ubuntu_64bit.deb pt80/</code></pre></div></li>
+<li>pindah ke foder pt80 tadi dengan cd pt80</li>
+<li>extract file .deb tadi dengan command ar
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ar -xv CiscoPacketTracer_801_Ubuntu_64bit.deb</code></pre></div></li>
+<li>buat folder data dan control
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir data
+$ mkdir control</code></pre></div></li>
+<li>extract data.tar.xz dan control.tar.xz ke folder yang sudah kita buat
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tar -C control -Jxf control.tar.xz
+$ tar -C data -Jxf data.tar.xz</code></pre></div></li>
+<li>pindahkan file yang ada di folder data ke /usr dan /opt
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd data
+$ sudo cp -r usr /
+$ sudo cp -r opt /</code></pre></div>
+Selesai. aplikasi sudah terinstall. akan tetapi kita perlu membuat shortcut untuk memudahkan kita membuka aplikasinya.
+Untuk fedora 35, masih ada bugs dimana ketika saat membuka pertama kali akan menemui blank screen berwarna putih di halaman login, untuk itu kita harus melakukan modifikasi file .desktop nya
+disini saya menggunakan gedit untuk melakukan modifikasi filenya.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo gedit /usr/share/applications/cisco-pt.desktop</code></pre></div>
+kemudian tambahkan &ndash;no-sandbox args pada baris Exec=&hellip;
+sehingga menjadi seperti ini
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Exec<span style="color:#f92672">=</span>/opt/pt/packettracer --no-sandbox args %f</code></pre></div>
+kemudian lakukan beberapa command berikut untuk install shortcutnya.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo xdg-desktop-menu install /usr/share/applications/cisco-pt.desktop
+sudo xdg-desktop-menu install /usr/share/applications/cisco-ptsa.desktop
+sudo update-mime-database /usr/share/mime
+sudo gtk-update-icon-cache --force --ignore-theme-index /usr/share/icons/gnome
+sudo xdg-mime default cisco-ptsa.desktop x-scheme-handler/pttp
+sudo ln -sf /opt/pt/PacketTracer /usr/local/bin/PacketTracer</code></pre></div></li>
+</ol>
+<p>Selesai, dan sekarang Packet Tracer sudah bisa digunakan.
+<img src="/img/packettracer.png" alt="Gambar 1">
+Gambar Packet Tracer</p>
+<p>Link Referensi :</p>
+<ol>
+<li><a href="https://gist.github.com/siliconjesus/c3590b8d4fdb6ebea57bb1ccd66c8434">https://gist.github.com/siliconjesus/c3590b8d4fdb6ebea57bb1ccd66c8434</a></li>
+<li><a href="https://netacad.com">https://netacad.com</a></li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
