@@ -15,8 +15,7 @@
       <guid>https://iswantoro.github.io/posts/catatan-hugo-di-linux/</guid>
       <description>Ini adalah catatan pribadi saya, biar ketika membuat content baru di hugo tidak lupa cara post nya. hehehe
   buat post baru $ hugo new posts/judul.md setelah selesai edit edit $ hugo server
-  kirim ke github pindah ke folder public dulu sebelum kirim ke github $ cd public $ git add . $ git commit -m &amp;#34;post baru des&amp;#34; $ git push origin main
-  </description>
+  kirim ke github pindah ke folder public dulu sebelum kirim ke github $ cd public $ git add . $ git commit -m &amp;#34;post baru des&amp;#34; $ git push origin main $ git push -u origin master</description>
     </item>
     
     <item>
