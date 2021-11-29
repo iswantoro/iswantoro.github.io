@@ -1,0 +1,33 @@
+baseURL = "https://iswantoro.github.io"
+languageCode = "en-us"
+title = "Catatan Saya"
+theme = "m10c"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+[params]
+author = "MAISwantoro"
+description = "Hanya ingin menulis, sesuatu yang sudah pernah saya coba. catatan pengingat perjalanan"
+avatar = "/img/avatar.jpeg"
+    [[params.social]]
+    icon = "github"
+    name = "Iswantoro's Github"
+    url = "https://github.com/iswantoro"
+    [[params.social]]
+    icon = "telegram"
+    name = "MAIswantoro"
+    url = "https://t.me/MAIswantoro"
