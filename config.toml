@@ -1,7 +1,8 @@
 baseURL = "https://iswantoro.github.io"
 languageCode = "en-us"
 title = "Catatan Saya"
-theme = "m10c"
+theme = ["hugo-embed-pdf-shortcode", "m10c"]
+enableInlineShortcodes = true
 
 [menu]
   [[menu.main]]
